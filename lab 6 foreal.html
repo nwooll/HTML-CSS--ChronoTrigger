@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><title>Lab 6</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        
+       @font-face {
+   font-family: time;
+   src: url(time.ttf);
+}
+            
+       @keyframes colorAnim {
+           0% {color: white;}
+           25% {color:darkgrey;}     
+           50% {color:gray;}
+           100% {color: black;}
+      } 
+        
+        @-webkit-keyframes swinging{
+    0%{-webkit-transform: rotate(10deg);}
+    50%{-webkit-transform: rotate(-5deg)}
+    100%{-webkit-transform: rotate(10deg);}
+        }
+
+    @keyframes swinging{
+        0%{transform: rotate(10deg);}
+        50%{transform: rotate(-5deg)}
+        100%{transform: rotate(10deg);}
+    }
+
+    .swingimage{
+        -webkit-transform-origin:  0;
+        transform-origin: 50% 0;
+        -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+        animation: swinging 3.5s ease-in-out forwards infinite;
+    }
+        
+        body {
+            background-color: black;
+        }
+        
+    .title{
+        float:left;
+        width: 75%;
+        height: 75%;
+        }
+            
+    #right {
+        position: absolute;
+        right: 0px;
+    }
+    
+    .center {
+        text-align: center;
+         padding: 400px;
+            
+    }
+        p {
+        animation: colorAnim 2s infinite;
+            font-family: time;
+            font-size: 20pt;
+      }
+        
+        p:hover {
+            font-size: 200%;
+            transform: scale(1);
+            transition: 1s;
+        }
+        
+     
+       
+      
+    </style>
+    
+    </head>
+    
+    
+    <body>
+        
+     <img id="right" class="swingimage" src="chrono.png" alt="clock">   
+        
+        <div><img class="title" src="title.png" alt="title"> </div>
+            
+        <div class= "center"><p>Push start.</p></div>
+            
+            
+            
+    </body>
+    
+</html>
